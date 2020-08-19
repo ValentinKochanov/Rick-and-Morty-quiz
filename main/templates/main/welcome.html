@@ -1,0 +1,10 @@
+{% extends "main/base.html" %}
+{% block content %}
+<body class="welcome">
+<div align="center" id="hello">
+    <h3>Приветствую {{ player.name }}</h3>
+    <h3>Вам предстоит ответить на 14 вопросов, которые помогут узнать насколько внимательно Вы смотрели сериал</h3>
+    <a href="{% url 'game' player=player id=1 %}"><button class="button">Начать викторину</button></a>
+</div>
+</body>
+{% endblock %}

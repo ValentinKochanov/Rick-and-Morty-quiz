@@ -1,0 +1,34 @@
+{% extends "main/base.html" %}
+{% block content %}
+<body class="game">
+    <div class="title"><p><b>{{ quest.title }}</b></p></div>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form_radio_btn">
+                <input id="answer1" type="radio" name="answer" value="{{ quest.answer1 }}" checked>
+                <label for="answer1">{{ quest.answer1 }}</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="answer2" type="radio" name="answer" value="{{ quest.answer2 }}">
+                <label for="answer2">{{ quest.answer2 }}</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="answer3" type="radio" name="answer" value="{{ quest.answer3 }}">
+                <label for="answer3">{{ quest.answer3 }}</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input id="answer4" type="radio" name="answer" value="{{ quest.answer4 }}">
+                <label for="answer4">{{ quest.answer4 }}</label>
+            </div>
+
+            <div class="form_radio_btn">
+                <input class="button" type="submit" value="Ответить">
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock %}

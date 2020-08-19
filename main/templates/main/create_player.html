@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{% block content %}
+<body class="home">
+<div align="center">
+    <h2>Приглашаю Вас пройти тематическую викторину по сериалу "Рик и Морти"</h2>
+    <h2>Если Вы зашли со смартфона, переведите его в горизонтальный режим</h2>
+    <h2>Для начала введите имя</h2>
+    <form method = "post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="button" type = "submit" value = "OK">
+    </form >
+</div>
+</body>
+{% endblock %}

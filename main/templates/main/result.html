@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{% block content %}
+<body class="result">
+<div align="center">
+    <h3>Поздравляю {{ player.name }}</h3>
+    <h3>Ваш результат {{ player.result }} из 14</h3>
+    <h3>Оставьте предложение, по какому ещё сериалу сделать викторину</h3>
+    <form method = "post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="button" type = "submit" value = "Отправить">
+    </form >
+</div>
+</body>
+{% endblock %}
